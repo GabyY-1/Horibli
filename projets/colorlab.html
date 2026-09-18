@@ -19,11 +19,26 @@
             <img src="../media/logo.png" alt="LOGO-HORIBLIMATCH" class="logo">
         </a>
 
-        <button class="menu-button" id="menuButton" aria-label="Ouvrir le menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <div class="header-actions">
+            <div class="notif-wrapper">
+                <button class="notif-button" id="notifButton" aria-label="Ouvrir les notifications" aria-expanded="false">
+                    <svg class="notif-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+                        <path d="M10 21h4"></path>
+                    </svg>
+                </button>
+                <div class="notif-menu" id="notifMenu">
+                    <p>Notifications et annonces de Horibli</p>
+                    <a href="https://gabyy-1.github.io/Notif-Horibli/" target="_blank" rel="noopener">Voir les notifications et annonces</a>
+                </div>
+            </div>
+
+            <button class="menu-button" id="menuButton" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
 
         <nav class="menu" id="menu">
             <a href="../index.html">ACCUEIL</a>
