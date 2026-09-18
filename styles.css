@@ -404,7 +404,6 @@ body {
 .notif-wrapper{position:relative}
 .notif-button{width:42px;height:42px;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center}
 .notif-button:hover{background:#f7f2e5;border-radius:50%}
-.notif-icon{font-size:23px;line-height:1;transform:rotate(180deg);display:block}
 .notif-menu{position:absolute;top:52px;right:0;width:280px;padding:16px;background:#fff;border:1px solid #e5e5e5;border-radius:10px;box-shadow:0 8px 25px rgba(0,0,0,.08);opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s ease;z-index:1001}
 .notif-menu.active{opacity:1;visibility:visible;transform:translateY(0)}
 .notif-menu p{margin-bottom:12px;color:#555;font-size:.95rem}
@@ -448,6 +447,7 @@ body {
     stroke-linecap: round;
     stroke-linejoin: round;
     display: block;
+    transform: none;
 }
 
 .notif-button:hover .notif-icon {
