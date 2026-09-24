@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 72px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #1d1d1d;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.hero {
+    min-height: calc(100vh - 72px);
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tag {
+    color: #888;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 9vw, 120px);
+    line-height: 0.95;
+    letter-spacing: -5px;
+    max-width: 1000px;
+}
+
+.description {
+    color: #999;
+    max-width: 520px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 35px;
+}
+
+.button {
+    width: fit-content;
+    margin-top: 35px;
+    padding: 14px 22px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.section {
+    min-height: 500px;
+    padding: 120px 8%;
+    border-top: 1px solid #1d1d1d;
+}
+
+.section h2 {
+    font-size: clamp(36px, 5vw, 65px);
+    margin-bottom: 25px;
+}
+
+.section > p:last-child {
+    max-width: 650px;
+    color: #999;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+footer {
+    padding: 40px 8%;
+    border-top: 1px solid #1d1d1d;
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .section {
+        padding: 80px 6%;
+    }
+}
