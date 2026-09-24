@@ -3,114 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Horibli est un studio numérique consacré à la création et au développement de projets web.">
-    <title>Horibli — Accueil</title>
-    <link rel="icon" href="assets/favicon.png">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <meta name="description" content="Horibli est un studio numérique consacré à la création de sites et de projets web.">
+    <title>Horibli</title>
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="header-inner">
-            <a class="brand" href="index.html">Horibli</a>
+    <header class="header">
+        <a href="index.html" class="brand" aria-label="Horibli - Accueil">
+            <img src="logo.png" alt="Logo Horibli">
+        </a>
 
-            <nav class="main-nav" aria-label="Navigation principale">
-                <a class="active" href="index.html">Accueil</a>
-                <a href="infos.html">Infos</a>
-                <a href="studios.html">Studios</a>
-                <a href="contact.html">Contact</a>
-                <a href="projets.html">Projets</a>
-            </nav>
-        </div>
+        <nav class="nav" aria-label="Navigation principale">
+            <a class="active" href="index.html">ACCUEIL</a>
+            <a href="infos.html">INFOS</a>
+            <a href="studios.html">STUDIOS</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="projets.html">PROJETS</a>
+        </nav>
     </header>
 
     <main>
-        <section class="home-intro">
-            <p class="eyebrow">Horibli</p>
-            <h1>Accueil</h1>
-            <p class="lead">
-                Un espace simple pour découvrir Horibli, ses informations,
-                ses studios et quelques projets.
-            </p>
-
-            <nav class="contents" aria-label="Table des matières">
-                <a href="infos.html">Infos</a>
-                <span>•</span>
-                <a href="studios.html">Studios</a>
-                <span>•</span>
-                <a href="contact.html">Contact</a>
-                <span>•</span>
-                <a href="projets.html">Projets</a>
-            </nav>
-        </section>
-
-        <section class="page-section">
-            <div class="section-heading">
-                <p class="eyebrow">01</p>
-                <h2>À propos de Horibli</h2>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">STUDIO NUMÉRIQUE</p>
+                <h1>Horibli</h1>
+                <p class="hero-text">
+                    Des idées, des sites et des projets construits simplement.
+                </p>
             </div>
 
+            <div class="hero-logo">
+                <img src="logo.png" alt="Logo Horibli">
+            </div>
+        </section>
+
+        <nav class="summary" aria-label="Sommaire de l'accueil">
+            <span>SOMMAIRE</span>
+            <a href="#infos">Infos</a>
+            <a href="#studios">Studios</a>
+            <a href="#projets">Projets</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <section class="section reveal" id="infos">
+            <div class="section-number">01</div>
             <div class="section-content">
+                <p class="eyebrow">INFOS</p>
+                <h2>Un studio pour créer.</h2>
                 <p>
                     Horibli est un studio numérique consacré à la création,
                     au développement et à l'expérimentation autour du web.
                 </p>
-                <a class="text-link" href="infos.html">Voir les informations →</a>
+                <a class="section-link" href="infos.html">En savoir plus ↗</a>
             </div>
         </section>
 
-        <section class="page-section">
-            <div class="section-heading">
-                <p class="eyebrow">02</p>
-                <h2>Studios</h2>
-            </div>
-
+        <section class="section reveal" id="studios">
+            <div class="section-number">02</div>
             <div class="section-content">
+                <p class="eyebrow">STUDIOS</p>
+                <h2>Plusieurs univers, un même nom.</h2>
                 <p>
-                    Les différentes activités et futurs studios Horibli seront
-                    présentés dans un espace dédié.
+                    Les studios et activités liés à Horibli auront chacun leur
+                    espace, leur identité et leurs propres projets.
                 </p>
-                <a class="text-link" href="studios.html">Découvrir les studios →</a>
+                <a class="section-link" href="studios.html">Voir les studios ↗</a>
             </div>
         </section>
 
-        <section class="page-section">
-            <div class="section-heading">
-                <p class="eyebrow">03</p>
-                <h2>Quelques projets</h2>
-            </div>
-
+        <section class="section reveal" id="projets">
+            <div class="section-number">03</div>
             <div class="section-content">
-                <p>
-                    Une sélection de projets Horibli sera ajoutée ici au fur et
-                    à mesure de leur création.
-                </p>
-                <a class="text-link" href="projets.html">Voir les projets →</a>
+                <p class="eyebrow">PROJETS</p>
+                <h2>Quelques créations.</h2>
+
+                <div class="mini-projects">
+                    <a href="projets.html">
+                        <span>Projet 01</span>
+                        <span>À venir</span>
+                    </a>
+                    <a href="projets.html">
+                        <span>Projet 02</span>
+                        <span>À venir</span>
+                    </a>
+                    <a href="projets.html">
+                        <span>Projet 03</span>
+                        <span>À venir</span>
+                    </a>
+                </div>
+
+                <a class="section-link" href="projets.html">Tous les projets ↗</a>
             </div>
         </section>
 
-        <section class="page-section">
-            <div class="section-heading">
-                <p class="eyebrow">04</p>
-                <h2>Contact</h2>
-            </div>
-
+        <section class="section reveal" id="contact">
+            <div class="section-number">04</div>
             <div class="section-content">
+                <p class="eyebrow">CONTACT</p>
+                <h2>Une idée ou une question ?</h2>
                 <p>
-                    Une page dédiée regroupera les moyens de contacter Horibli
-                    et les liens utiles.
+                    Les moyens de contacter Horibli et ses liens utiles sont
+                    regroupés sur une page dédiée.
                 </p>
-                <a class="text-link" href="contact.html">Accéder au contact →</a>
+                <a class="section-link" href="contact.html">Nous contacter ↗</a>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <p>© 2026 Horibli</p>
-            <a href="index.html">Accueil</a>
+    <footer class="footer">
+        <div>
+            <strong>Horibli</strong>
+            <span>Studio numérique</span>
         </div>
+        <p>© 2026 Horibli</p>
     </footer>
 
     <script src="script.js"></script>
