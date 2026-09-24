@@ -3,57 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Une sélection de projets créés par Horibli.">
+    <meta name="description" content="Les projets Horibli.">
     <title>Horibli — Projets</title>
-    <link rel="icon" href="assets/favicon.png">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="header-inner">
-            <a class="brand" href="index.html">Horibli</a>
+    <header class="header">
+        <a href="index.html" class="brand" aria-label="Horibli - Accueil">
+            <img src="logo.png" alt="Logo Horibli">
+        </a>
 
-            <nav class="main-nav" aria-label="Navigation principale">
-                <a href="index.html">Accueil</a>
-                <a href="infos.html">Infos</a>
-                <a href="studios.html">Studios</a>
-                <a href="contact.html">Contact</a>
-                <a class="active" href="projets.html">Projets</a>
-            </nav>
-        </div>
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="index.html">ACCUEIL</a>
+            <a href="infos.html">INFOS</a>
+            <a href="studios.html">STUDIOS</a>
+            <a href="contact.html">CONTACT</a>
+            <a class="active" href="projets.html">PROJETS</a>
+        </nav>
     </header>
 
-    <main>
+    <main class="page">
         <section class="page-hero">
-            <p class="eyebrow">Horibli</p>
+            <p class="eyebrow">HORIBLI</p>
             <h1>Projets</h1>
-            <p class="lead">
-                Quelques projets Horibli seront présentés ici.
+            <p>
+                Une sélection de créations et d'expériences réalisées
+                autour de Horibli.
             </p>
         </section>
 
-        <section class="projects-grid">
-            <article class="project-card">
-                <p class="eyebrow">Projet</p>
-                <h2>À venir</h2>
-                <p>Le premier projet présenté sur le nouveau site Horibli apparaîtra ici.</p>
-            </article>
+        <section class="project-list reveal">
+            <a href="#" class="project-row">
+                <div>
+                    <span class="project-index">01</span>
+                    <h2>Projet à venir</h2>
+                </div>
+                <span class="project-status">BIENTÔT</span>
+            </a>
 
-            <article class="project-card">
-                <p class="eyebrow">Projet</p>
-                <h2>À venir</h2>
-                <p>Tu pourras remplacer cette carte par un autre projet quand tu voudras.</p>
-            </article>
+            <a href="#" class="project-row">
+                <div>
+                    <span class="project-index">02</span>
+                    <h2>Projet à venir</h2>
+                </div>
+                <span class="project-status">BIENTÔT</span>
+            </a>
+
+            <a href="#" class="project-row">
+                <div>
+                    <span class="project-index">03</span>
+                    <h2>Projet à venir</h2>
+                </div>
+                <span class="project-status">BIENTÔT</span>
+            </a>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <p>© 2026 Horibli</p>
-            <a href="index.html">Accueil</a>
+    <footer class="footer">
+        <div>
+            <strong>Horibli</strong>
+            <span>Studio numérique</span>
         </div>
+        <p>© 2026 Horibli</p>
     </footer>
 
     <script src="script.js"></script>
