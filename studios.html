@@ -5,55 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Les studios et activités Horibli.">
     <title>Horibli — Studios</title>
-    <link rel="icon" href="assets/favicon.png">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="header-inner">
-            <a class="brand" href="index.html">Horibli</a>
+    <header class="header">
+        <a href="index.html" class="brand" aria-label="Horibli - Accueil">
+            <img src="logo.png" alt="Logo Horibli">
+        </a>
 
-            <nav class="main-nav" aria-label="Navigation principale">
-                <a href="index.html">Accueil</a>
-                <a href="infos.html">Infos</a>
-                <a class="active" href="studios.html">Studios</a>
-                <a href="contact.html">Contact</a>
-                <a href="projets.html">Projets</a>
-            </nav>
-        </div>
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="index.html">ACCUEIL</a>
+            <a href="infos.html">INFOS</a>
+            <a class="active" href="studios.html">STUDIOS</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="projets.html">PROJETS</a>
+        </nav>
     </header>
 
-    <main>
+    <main class="page">
         <section class="page-hero">
-            <p class="eyebrow">Horibli</p>
+            <p class="eyebrow">HORIBLI</p>
             <h1>Studios</h1>
-            <p class="lead">
-                Cet espace présentera les différentes activités et futurs studios Horibli.
+            <p>
+                Les différentes branches et activités de Horibli seront
+                regroupées ici.
             </p>
         </section>
 
-        <section class="page-section">
-            <div class="section-heading">
-                <p class="eyebrow">Bientôt</p>
-                <h2>Les studios arrivent</h2>
-            </div>
-
-            <div class="section-content">
+        <section class="studio-list reveal">
+            <article>
+                <div>
+                    <p class="eyebrow">STUDIO 01</p>
+                    <h2>À venir</h2>
+                </div>
                 <p>
-                    Les studios seront ajoutés ici lorsqu'ils seront prêts,
-                    avec leur rôle, leurs créations et leurs liens.
+                    Le premier studio Horibli sera présenté ici avec son identité,
+                    son rôle et ses projets.
                 </p>
-            </div>
+            </article>
+
+            <article>
+                <div>
+                    <p class="eyebrow">STUDIO 02</p>
+                    <h2>À venir</h2>
+                </div>
+                <p>
+                    Cet emplacement est prêt pour une future activité du studio.
+                </p>
+            </article>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <p>© 2026 Horibli</p>
-            <a href="index.html">Accueil</a>
+    <footer class="footer">
+        <div>
+            <strong>Horibli</strong>
+            <span>Studio numérique</span>
         </div>
+        <p>© 2026 Horibli</p>
     </footer>
 
     <script src="script.js"></script>
