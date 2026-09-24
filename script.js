@@ -1,12 +1,18 @@
-document.querySelectorAll("a[href^='#']").forEach((link) => {
-    link.addEventListener("click", (event) => {
-        const target = document.querySelector(link.getAttribute("href"));
+const revealElements = document.querySelectorAll(".reveal");
 
-        if (!target) {
-            return;
-        }
-
-        event.preventDefault();
-        target.scrollIntoView({ behavior: "smooth" });
+if (revealElements.length) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12
     });
-});
+
+    revealElements.forEach((element) => {
+        observer.observe(element);
+    });
+}
