@@ -1,3 +1,15 @@
+:root {
+    --background: #f7f7f4;
+    --surface: #ffffff;
+    --text: #171717;
+    --text-secondary: #6f6f6a;
+    --accent: #b28b50;
+    --border: #deded8;
+    --max-width: 1180px;
+    --header-height: 76px;
+    --radius: 14px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,124 +21,264 @@ html {
 }
 
 body {
-    background: #080808;
-    color: #f5f5f5;
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
-header {
-    height: 72px;
-    padding: 0 6%;
+a {
+    color: inherit;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(247, 247, 244, 0.94);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.header-inner {
+    width: min(var(--max-width), calc(100% - 48px));
+    min-height: var(--header-height);
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #1d1d1d;
+    gap: 32px;
 }
 
-.logo {
-    color: white;
+.brand {
+    flex: 0 0 auto;
     font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.main-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.main-nav a {
+    position: relative;
+    flex: 0 0 auto;
+    padding: 26px 0 23px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--text);
+}
+
+.main-nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 17px;
+    height: 1px;
+    background: var(--text);
+}
+
+main {
+    width: min(var(--max-width), calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.home-intro,
+.page-hero {
+    min-height: 430px;
+    padding: 110px 0 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.page-hero {
+    min-height: 390px;
+}
+
+.eyebrow {
+    margin-bottom: 14px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: clamp(52px, 8vw, 96px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+}
+
+.lead {
+    max-width: 650px;
+    margin-top: 26px;
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+.contents {
+    margin-top: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.contents a {
+    text-decoration: none;
+}
+
+.contents a:hover {
+    color: var(--text);
+}
+
+.page-section {
+    padding: 92px 0;
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+    gap: 80px;
+    border-top: 1px solid var(--border);
+}
+
+.section-heading h2 {
+    max-width: 440px;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.section-content {
+    max-width: 640px;
+}
+
+.section-content p {
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 14px;
     font-weight: 700;
     text-decoration: none;
 }
 
-nav {
+.text-link:hover {
+    color: var(--accent);
+}
+
+.projects-grid {
+    padding: 0 0 100px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    min-height: 260px;
+    padding: 34px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.project-card h2 {
+    margin-bottom: 18px;
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+
+.project-card p:last-child {
+    color: var(--text-secondary);
+}
+
+.site-footer {
+    border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+    width: min(var(--max-width), calc(100% - 48px));
+    min-height: 110px;
+    margin: 0 auto;
     display: flex;
-    gap: 30px;
-}
-
-nav a {
-    color: #aaa;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.2s;
-}
-
-nav a:hover {
-    color: white;
-}
-
-.hero {
-    min-height: calc(100vh - 72px);
-    padding: 100px 8%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.tag {
-    color: #888;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--text-secondary);
     font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
 }
 
-.hero h1 {
-    font-size: clamp(55px, 9vw, 120px);
-    line-height: 0.95;
-    letter-spacing: -5px;
-    max-width: 1000px;
-}
-
-.description {
-    color: #999;
-    max-width: 520px;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-top: 35px;
-}
-
-.button {
-    width: fit-content;
-    margin-top: 35px;
-    padding: 14px 22px;
-    background: white;
-    color: black;
+.footer-inner a {
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
 }
 
-.section {
-    min-height: 500px;
-    padding: 120px 8%;
-    border-top: 1px solid #1d1d1d;
-}
-
-.section h2 {
-    font-size: clamp(36px, 5vw, 65px);
-    margin-bottom: 25px;
-}
-
-.section > p:last-child {
-    max-width: 650px;
-    color: #999;
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-footer {
-    padding: 40px 8%;
-    border-top: 1px solid #1d1d1d;
-    color: #666;
-    font-size: 14px;
-}
-
-@media (max-width: 650px) {
-    nav {
-        display: none;
+@media (max-width: 760px) {
+    .header-inner {
+        width: min(100% - 28px, var(--max-width));
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+        padding-top: 18px;
     }
 
-    .hero {
-        padding: 70px 6%;
+    .main-nav {
+        width: 100%;
+        gap: 22px;
     }
 
-    .hero h1 {
-        letter-spacing: -3px;
+    .main-nav a {
+        padding-top: 14px;
     }
 
-    .section {
-        padding: 80px 6%;
+    main {
+        width: min(100% - 28px, var(--max-width));
+    }
+
+    .home-intro,
+    .page-hero {
+        min-height: 360px;
+        padding: 80px 0 70px;
+    }
+
+    h1 {
+        letter-spacing: -2.5px;
+    }
+
+    .page-section {
+        padding: 68px 0;
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        width: min(100% - 28px, var(--max-width));
     }
 }
